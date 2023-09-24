@@ -1,5 +1,4 @@
 from tkinter import *
-from tkinter.font import Font 
 from PIL import Image, ImageTk
 from tkinter import filedialog
 import pickle
@@ -16,8 +15,6 @@ file_menu.add_command(label="Save List",command=lambda:save_list())
 file_menu.add_command(label="Open List",command=lambda:open_list())
 file_menu.add_separator()
 file_menu.add_command(label="Delete List",command=lambda:delete_list())
-
-
 ##Adding Widgets
 tdl = Label(root, image=background_photo, bg="#F4C0F0")
 tdl.grid(row=2, column=5, columnspan=25, rowspan=9)  
@@ -41,7 +38,6 @@ my_scrollbar.grid(row=7, column=12, sticky="NS")
 ## Configure the scrollbar to control the Listbox
 my_scrollbar.config(command=my_list.yview)
 my_list.config(yscrollcommand=my_scrollbar.set)
-
 ## Functionality
 def delete_item():
     my_list.delete(ANCHOR)
@@ -82,7 +78,6 @@ def open_list():
         stuff=pickle.load(input_file)
         for item in stuff:
             my_list.insert(END,item)
-
 root.eval("tk::PlaceWindow . center")
 root.geometry("500x600")
 root.resizable(False,False)
