@@ -14,7 +14,7 @@ file_menu=Menu(my_menu,tearoff=False)
 my_menu.add_cascade(label="File",menu=file_menu)
 file_menu.add_command(label="Save List",command=lambda:save_list())
 file_menu.add_command(label="Open List",command=lambda:open_list())
-file_menu.add_separator
+file_menu.add_separator()
 file_menu.add_command(label="Delete List",command=lambda:delete_list())
 
 
